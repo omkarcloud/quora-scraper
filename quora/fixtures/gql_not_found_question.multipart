@@ -1,0 +1,7 @@
+--qgqlmpb
+Content-Type: application/json;
+{"data": {"question": null, "viewer": {"canSeeDeletedContent": false, "id": "Vmlld2VyQDA6MA=="}, "redirectedQuestion": null}, "broadcastId": "main-w-chan944-8888-react_hehbqhdhooxrdhhl-KnO6", "tchannelData": {"minSeq": "0", "channel": "main-w-chan944-8888-react_hehbqhdhooxrdhhl-KnO6", "channelHash": "16496508583574772742", "boxName": "chan946-8888", "baseHost": "quora.com", "targetUrl": "", "enableWebsocket": true}, "extensions": {"is_final": false}}
+--qgqlmpb
+Content-Type: application/json;
+{"data": {"question": null, "viewer": {"id": "Vmlld2VyQDA6MA==", "__typename": "Viewer", "draftsCount": 0, "answerDraftsCount": 0, "writeNavBadgeCount": 0, "appBadgeCount": 0, "feedTabBadgeCount": 0, "followingTabBadgeCount": 0, "inboxBadgeCount": 0, "notificationNavBadgeCount": 0, "profileBadgeCount": 0, "silosBadgeCount": "{}", "tribeNavBadgeCount": 0, "useProfileDotForBadgeCount": false, "isAdminMode": false, "cantAnswerButtonShouldShowText": true, "hideLastActionBarItem": false, "user": null}}, "label": "QuestionPageHeaderSectionQuery$defer$QuestionSubheaderWrapper_queryRoot", "path": [], "extensions": {"is_final": true}}
+--qgqlmpb--

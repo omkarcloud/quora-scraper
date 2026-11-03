@@ -1,0 +1,10 @@
+--qgqlmpb
+Content-Type: application/json;
+{"data": {"question": null, "viewer": {"canSeeDeletedContent": false, "id": "Vmlld2VyQDA6MA=="}, "redirectedQuestion": {"id": "UXVlc3Rpb25AMDoxMDk5MzE=", "__typename": "Question"}}, "broadcastId": "main-w-chan945-8888-react_paxqlajpzxuyjdsx-Achk", "tchannelData": {"minSeq": "0", "channel": "main-w-chan945-8888-react_paxqlajpzxuyjdsx-Achk", "channelHash": "11506927011008086710", "boxName": "chan948-8888", "baseHost": "quora.com", "targetUrl": "", "enableWebsocket": true}, "extensions": {"is_final": false}}
+--qgqlmpb
+Content-Type: application/json;
+{"data": {"question": null, "viewer": {"id": "Vmlld2VyQDA6MA==", "__typename": "Viewer", "draftsCount": 0, "answerDraftsCount": 0, "writeNavBadgeCount": 0, "appBadgeCount": 0, "feedTabBadgeCount": 0, "followingTabBadgeCount": 0, "inboxBadgeCount": 0, "notificationNavBadgeCount": 0, "profileBadgeCount": 0, "silosBadgeCount": "{}", "tribeNavBadgeCount": 0, "useProfileDotForBadgeCount": false, "isAdminMode": false, "cantAnswerButtonShouldShowText": true, "hideLastActionBarItem": false, "user": null}}, "label": "QuestionPageHeaderSectionQuery$defer$QuestionSubheaderWrapper_queryRoot", "path": [], "extensions": {"is_final": false}}
+--qgqlmpb
+Content-Type: application/json;
+{"data": {"id": "UXVlc3Rpb25AMDoxMDk5MzE=", "__typename": "Question", "qid": 109931, "url": "/What-is-machine-learning", "title": "{\"sections\": [{\"spans\": [{\"text\": \"What is machine learning?\", \"modifiers\": {}}], \"indent\": 0, \"quoted\": false, \"type\": \"plain\", \"is_rtl\": false}]}", "isRecentlyGeneratedQuestion": false, "isPartnerQuestion": false, "isTrendyQuestion": false, "isFollowUpQuestion": false, "asker": {"id": "VXNlckAwOjIyOTYyMQ==", "__typename": "User", "isEmployee": false, "uid": 229621}, "slug": "What-is-machine-learning", "network": {"nid": 0, "id": "TmV0d29yazow"}, "tribeItem": null}, "label": "QuestionPageHeaderSectionQuery$defer$QuestionSubheaderWrapper_redirectedQuestion", "path": ["redirectedQuestion"], "extensions": {"is_final": true}}
+--qgqlmpb--
