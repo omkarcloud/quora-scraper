@@ -108,7 +108,7 @@ All 20 endpoints are now live at `http://localhost:8000`.
 | Topic Answers | `/topics/answers` | The topic's answer feed with full text and each question |
 | Space Details | `/spaces/details` | Description, rules, member and post counts, subscription prices |
 | Space Posts | `/spaces/posts` | The Space's post feed with full text, upvotes and views |
-| Space People | `/spaces/people` | Admins, moderators, contributors and followers with weekly stats |
+| Space People | `/spaces/people` | Admins, moderators, contributors and followers with their roles |
 | Post Details | `/posts/details` | One post's full text, links, images, counts and author |
 
 ## 🔍 Exploring Parameters
