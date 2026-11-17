@@ -40,3 +40,8 @@ def quora_proxy():
 def quora_fallback_proxy():
     """The exit used after a block (None = keep the same connection)."""
     return os.environ.get("QUORA_PROXY") or None
+
+
+# ---- added by the sync: defaults for a direct run ----
+QUORA_SESSION_MAX_AGE = 1800
+QUORA_SESSION_USES = 40

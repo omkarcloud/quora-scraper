@@ -30,11 +30,13 @@ post, a profile post, and the null-root not-found payloads. The pages'
 `window.ansFrontendRelayWebpackManifest` asset map (JS chunk URLs, read by
 no parser) is emptied in the fixtures to keep them small.
 """
-import json
+import fastjson
 import re
 from datetime import datetime, timezone
 
 from quora.refs import abs_link, profile_link, question_link, topic_link
+from scraper_utils.values import bool_or_none as _bool, to_int as _int
+from scraper_utils.text import trimmed as _str
 
 # ---- scalars -----------------------------------------------------------------
 
@@ -50,29 +52,6 @@ def micros_to_iso(value):
         return datetime.fromtimestamp(micros / 1_000_000, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     except (OverflowError, OSError, ValueError):
         return None
-
-
-def _int(value):
-    if isinstance(value, bool):
-        return None
-    if isinstance(value, int):
-        return value
-    if isinstance(value, float):
-        return int(value)
-    if isinstance(value, str) and value.strip().lstrip("-").isdigit():
-        return int(value.strip())
-    return None
-
-
-def _str(value):
-    if value is None:
-        return None
-    value = str(value).strip()
-    return value or None
-
-
-def _bool(value):
-    return value if isinstance(value, bool) else None
 
 
 def _year(value):
@@ -100,7 +79,7 @@ def _qtext_doc(value):
             return None
         if text.startswith("{"):
             try:
-                return _qtext_doc(json.loads(text))
+                return _qtext_doc(fastjson.loads(text))
             except ValueError:
                 return {"sections": [{"spans": [{"text": text}], "type": "plain"}]}
         return {"sections": [{"spans": [{"text": text}], "type": "plain"}]}
@@ -903,8 +882,8 @@ def inline_results(html):
     out = {}
     for name, _, _, literal in _INLINE_RE.findall(html or ""):
         try:
-            text = json.loads(literal)        # the JS string literal
-            payload = json.loads(text) if isinstance(text, str) else text
+            text = fastjson.loads(literal)        # the JS string literal
+            payload = fastjson.loads(text) if isinstance(text, str) else text
         except ValueError:
             continue
         if isinstance(payload, dict):
@@ -923,7 +902,7 @@ def inline_variables(html):
         text = _balanced_json(html, start)
         if text:
             try:
-                value = json.loads(text)
+                value = fastjson.loads(text)
             except ValueError:
                 value = None
             if isinstance(value, dict) and value:
